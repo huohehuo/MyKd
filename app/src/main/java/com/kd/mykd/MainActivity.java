@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.kd.mykd.activity.MeActivity;
+import com.kd.mykd.activity.TabActivity;
 import com.kd.mykd.fragment.MainFragment;
 import com.kd.mykd.fragment.MeFragment;
 
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             startActivity(new Intent(MainActivity.this, MeActivity.class));
         } else if (id == R.id.nav_share) {
-
+            startActivity(new Intent(MainActivity.this, TabActivity.class));
         } else if (id == R.id.nav_send) {
 
         }
