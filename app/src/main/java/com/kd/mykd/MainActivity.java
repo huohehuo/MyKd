@@ -21,6 +21,7 @@ import com.kd.mykd.activity.MeActivity;
 import com.kd.mykd.activity.TabActivity;
 import com.kd.mykd.fragment.MainFragment;
 import com.kd.mykd.fragment.MeFragment;
+import com.kd.mykd.fragment.MeiNvFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.fragment_container,mainFragment);
         transaction.commit();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mainFragment).commit();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -105,12 +109,13 @@ public class MainActivity extends AppCompatActivity
             MainFragment mainFragment = new MainFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mainFragment).commit();
         } else if (id == R.id.nav_gallery) {
+            MeiNvFragment fragment = new MeiNvFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
+        } else if (id == R.id.nav_slideshow) {
             MeFragment meFragment = new MeFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,meFragment).commit();
-        } else if (id == R.id.nav_slideshow) {
-            startActivity(new Intent(MainActivity.this, MeActivity.class));
         } else if (id == R.id.nav_share) {
-            startActivity(new Intent(MainActivity.this, TabActivity.class));
+            startActivity(new Intent(MainActivity.this, MeActivity.class));
         } else if (id == R.id.nav_send) {
 
         }

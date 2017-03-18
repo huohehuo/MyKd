@@ -1,4 +1,4 @@
-package com.kd.mykd;
+package com.kd.mykd.Util;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
