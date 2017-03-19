@@ -131,7 +131,7 @@ public class MainFragment extends BaseFragment {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//添加 RxJava 适配器
                 .build();
         ApiService apiManager = retrofit.create(ApiService.class);//这里采用的是Java的动态代理模式
-        apiManager.getNewsData("0271191a3d0bcd8483debff0c759f20a", "10", page)
+        apiManager.getNewsData("e389820925ea6e0ca99cc0ea58863e1f", "10", page)
                 .subscribeOn(Schedulers.io())
                 .map(new Func1<NewsGson, List<News>>() {
                     @Override

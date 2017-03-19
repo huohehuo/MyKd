@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         transaction.replace(R.id.fragment_container,mainFragment);
         transaction.commit();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mainFragment).commit();
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mainFragment).commit();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

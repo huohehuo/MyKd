@@ -51,10 +51,10 @@ public class PictureDescribeActivity extends BaseActivity {
                 .into(new SimpleTarget<Bitmap>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
                           @Override
                           public void onResourceReady(Bitmap bitmap, GlideAnimation glideAnimation) {
-                              Log.d("bitmap","高"+bitmap.getHeight()+"宽"+bitmap.getWidth());
+                              Log.d("bitmap", "高" + bitmap.getHeight() + "宽" + bitmap.getWidth());
                               int width = dm.widthPixels;//宽度为屏幕宽度一半
                               int height = bitmap.getHeight() * width / bitmap.getWidth();//计算View的高度
-                              Log.d("picture", "高"+height + "宽" +width); //获取bitmap信息，可赋值给外部变量操作，也可在此时行操作。
+                              Log.d("picture", "高" + height + "宽" + width); //获取bitmap信息，可赋值给外部变量操作，也可在此时行操作。
                               ViewGroup.LayoutParams params = imgPicture.getLayoutParams();
                               params.height = height;
                               params.width = width;

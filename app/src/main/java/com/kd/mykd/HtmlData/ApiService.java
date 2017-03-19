@@ -9,13 +9,13 @@ import rx.Observable;
  * Created by Administrator on 2016/10/23.
  */
 
-public interface ApiService{
+public interface ApiService {
     @GET("social/")
-    Observable <String> getString(@Query("key") String key, @Query("num") String num, @Query("page") int page);
+    Observable<String> getString(@Query("key") String key, @Query("num") String num, @Query("page") int page);
 
     @GET("social/")
-    Observable <NewsGson> getNewsData(@Query("key") String key, @Query("num") String num, @Query("page") int page);
+    Observable<NewsGson> getNewsData(@Query("key") String key, @Query("num") String num, @Query("page") int page);
 
     @GET("meinv/")
-    Observable <MeiNvGson> getPictureData(@Query("key") String key, @Query("num") String num, @Query("page") int page);
+    Observable<MeiNvGson> getPictureData(@Query("key") String key, @Query("num") String num, @Query("page") int page);
 }
