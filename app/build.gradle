@@ -3,6 +3,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.1'
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.kd.mykd"
         minSdkVersion 15
@@ -10,6 +11,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        dataBinding {
+            enabled = true
+        }
     }
     buildTypes {
         release {
@@ -32,20 +37,28 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.google.code.gson:gson:2.7'
+    compile 'com.orhanobut:logger:1.15'
     //高级的recyclerview
     compile 'com.jude:easyrecyclerview:4.2.3'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
     //rxjava
     compile 'com.squareup.retrofit2:retrofit-converters:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'com.android.support:multidex:1.0.1'
     //图片下载处理
     compile 'com.github.bumptech.glide:glide:3.7.0'
+    //RxJava
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
     //okhttp
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.squareup.okio:okio:1.9.0'
+    //图片剪切（或导包）
+    //compile 'com.yalantis:ucrop:2.2.0'
+    compile project(':ucrop')
 }
